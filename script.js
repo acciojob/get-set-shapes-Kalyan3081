@@ -1,36 +1,38 @@
-//complete this code
+// Rectangle class
 class Rectangle {
-	constructor(width, height){
-		this._width=width
-		this._height=height
-	}
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
+
+    // Getter for width
+    get width() {
+        return this._width;
+    }
+
+    // Getter for height
+    get height() {
+        return this._height;
+    }
+
+    // Method to calculate the area of the rectangle
+    getArea() {
+        return this._width * this._height;
+    }
 }
 
-get width(){
-	return this._width
-}
-
-get height(){
-	return this._height
-}
-
-getArea(){
-	// console.log(`${this._width}`)
-	// console.log(`${this._height}`)
-	return this._width*this._height
-}
-
+// Square class extending Rectangle
 class Square extends Rectangle {
-	constructor(side){
-		super(side,side)
-	}
+    constructor(side) {
+        // Call the parent class (Rectangle) constructor with side for both width and height
+        super(side, side);
+    }
+
+    // Method to calculate the perimeter of the square
+    getPerimeter() {
+        return 4 * this.width; // width is equivalent to side for a square
+    }
 }
-	getPerimeter(){
-		// console.log(`${this._width}`)
-		// console.log(`${this._height}`)
-		// console.log(` ${this._width}* ${this._height}`)
-		console.log(`4*${side}`)
-	}
 
 // Do not change the code below this line
 window.Rectangle = Rectangle;
